@@ -50,7 +50,7 @@ namespace CollectionExamples
 
             //Hashtable example
             #region Hashtable
-            Console.WriteLine("**********Hashtable example**********");
+            Console.WriteLine("\n**********Hashtable example**********");
             Hashtable hashtable = new Hashtable();
 
             int[] arrayInt = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -81,7 +81,7 @@ namespace CollectionExamples
 
             //Queue example
             #region Queue
-            Console.WriteLine("**********Queue example**********");
+            Console.WriteLine("\n**********Queue example**********");
             Queue queue = new Queue(newHhashtable);
             Console.WriteLine($"Collection elements count: {queue.Count}");
             Console.Write("Collection elements...\n");
@@ -116,7 +116,7 @@ namespace CollectionExamples
 
             //Stack example
             #region Stack
-            Console.WriteLine("**********Stack example**********");
+            Console.WriteLine("\n**********Stack example**********");
             Stack stack = new Stack();
             stack.Push("Doe");
             stack.Push("Jane");
@@ -146,7 +146,7 @@ namespace CollectionExamples
 
             //HashSet example
             #region HashSet
-            Console.WriteLine("**********HashSet example**********");
+            Console.WriteLine("\n**********HashSet example**********");
 
             HashSet<int> evenNumbers = new HashSet<int>();
             HashSet<int> oddNumbers = new HashSet<int>();
@@ -182,7 +182,7 @@ namespace CollectionExamples
 
             //SortedSet example
             #region SortedSet
-            Console.WriteLine("**********SortedSet example**********");
+            Console.WriteLine("\n**********SortedSet example**********");
             Random rnd = new Random();
             SortedSet<int> sortedSet1 = new SortedSet<int>();
             SortedSet<int> sortedSet2 = new SortedSet<int>();
@@ -205,6 +205,29 @@ namespace CollectionExamples
             sortedSet.UnionWith(sortedSet2);
 
             Console.Write("\nUnion elements...\n");
+            foreach (var item in sortedSet)
+            {
+                Console.Write($"{item}  ");
+            }
+
+            int max = sortedSet.Max();
+            int min = sortedSet.Min();
+
+            Console.WriteLine($"\nMaximum element is {max}, minimum element is {min}");
+
+            sortedSet.Remove(1);
+
+            bool b1 = sortedSet.SetEquals(sortedSet2);
+            bool b2 = sortedSet.Contains(18);
+
+            SortedSet<int> newSortedSet = new SortedSet<int>() { 17, 18, 19 };
+            bool b3 = newSortedSet.IsSubsetOf(sortedSet);
+            bool b4 = newSortedSet.IsProperSubsetOf(sortedSet);
+
+            Console.WriteLine($"\n{b1} {b2} {b3} {b4}");
+
+            sortedSet.ExceptWith(sortedSet1);
+            Console.WriteLine("\nExept elements...\n");
             foreach (var item in sortedSet)
             {
                 Console.Write($"{item}  ");
