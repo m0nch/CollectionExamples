@@ -12,8 +12,8 @@ namespace CollectionExamples
     {
         static void Main(string[] args)
         {
-//OrderedDictionary example
-#region OrderedDictionary
+        //OrderedDictionary example
+        #region OrderedDictionary
             Console.WriteLine("**********OrderedDictionary example**********");
             OrderedDictionary orderedDictionary = new OrderedDictionary();
 
@@ -46,10 +46,10 @@ namespace CollectionExamples
 
             orderedDictionary.Clear();
             Console.WriteLine($"OrderedDictionary elements count: {orderedDictionary.Count}");
-#endregion
+        #endregion
 
-//Hashtable example
-#region Hashtable
+        //Hashtable example
+        #region Hashtable
             Console.WriteLine("\n**********Hashtable example**********");
             Hashtable hashtable = new Hashtable();
 
@@ -77,10 +77,10 @@ namespace CollectionExamples
             hashtable.Remove(9);
 
             hashtable.Clear();
-#endregion
+        #endregion
 
-//Queue example
-#region Queue
+        //Queue example
+        #region Queue
             Console.WriteLine("\n**********Queue example**********");
             Queue queue = new Queue(newHhashtable);
             Console.WriteLine($"Collection elements count: {queue.Count}");
@@ -112,10 +112,10 @@ namespace CollectionExamples
 
             Console.WriteLine($"Collection elements count: {queue.Count}");
 
-#endregion
+        #endregion
 
-//Stack example
-#region Stack
+        //Stack example
+        #region Stack
             Console.WriteLine("\n**********Stack example**********");
             Stack stack = new Stack();
             stack.Push("Doe");
@@ -142,10 +142,10 @@ namespace CollectionExamples
                 Console.Write($"{item} ");
             }
             Console.WriteLine();
-#endregion
+        #endregion
 
-//HashSet example
-#region HashSet
+        //HashSet example
+        #region HashSet
             Console.WriteLine("\n**********HashSet example**********");
 
             HashSet<int> evenNumbers = new HashSet<int>();
@@ -178,10 +178,10 @@ namespace CollectionExamples
                 }
                 Console.WriteLine(" }");
             }
-#endregion
+        #endregion
 
-//SortedSet example
-#region SortedSet
+        //SortedSet example
+        #region SortedSet
             Console.WriteLine("\n**********SortedSet example**********");
             Random rnd = new Random();
             SortedSet<int> sortedSet1 = new SortedSet<int>();
@@ -232,7 +232,7 @@ namespace CollectionExamples
             {
                 Console.Write($"{item}  ");
             }
-#endregion
+        #endregion
 
             Console.ReadKey();
         }
