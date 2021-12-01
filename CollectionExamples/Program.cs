@@ -44,6 +44,9 @@ namespace CollectionExamples
             }
             Console.WriteLine($"OrderedDictionary elements count: {orderedDictionary.Count}");
 
+            orderedDictionary.RemoveAt(2);
+            Console.WriteLine($"OrderedDictionary elements count: {orderedDictionary.Count}");
+
             orderedDictionary.Clear();
             Console.WriteLine($"OrderedDictionary elements count: {orderedDictionary.Count}");
         #endregion
